@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Gestore4-v2';
+  showHideSideBar : boolean =false;
+
+  onShowSideBarChange(showHideSideBar){
+    this.showHideSideBar = showHideSideBar
+  }
 }
