@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProduitComponent } from './produit/produit.component';
-import { StockComponent } from './stock/stock.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProduitComponent } from './content/produit/produit.component';
+import { StockComponent } from './content/stock/stock.component';
+import { DashboardComponent } from './content/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path : '',
-    component : ProduitComponent
+    redirectTo : 'dashboard' , pathMatch : 'full'
   },
   {
     path : 'stock',

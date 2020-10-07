@@ -1,6 +1,7 @@
 import { Produit } from './../produit/shared/produit';
-import { AfficheProdService } from './../service/AfficheProd.service';
+import { AfficheProdService } from '../../service/AfficheProd.service';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators} from '@angular/forms'
 @Component({
   selector: 'app-stock',
   templateUrl: './stock.component.html',
@@ -9,7 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class StockComponent implements OnInit {
   
   produits : Produit [] = []
-  constructor(private afficheProdService : AfficheProdService) { 
+
+  produitForm : FormGroup
+  constructor(private afficheProdService : AfficheProdService , private fb : FormBuilder ){
+    this.produitForm = this.fb.group({
+      name : ['',Validators.required],
+      quantite : '',
+      prixUnitaire : ''
+    }) 
     this.produits = this.afficheProdService.getProduits();
   }
 

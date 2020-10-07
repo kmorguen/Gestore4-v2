@@ -1,5 +1,5 @@
 import { Produit } from './shared/produit';
-import { AfficheProdService } from './../service/AfficheProd.service';
+import { AfficheProdService } from '../../service/AfficheProd.service';
 import { Component, OnInit } from '@angular/core'; 
 
 @Component({
