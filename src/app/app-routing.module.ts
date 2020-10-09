@@ -1,3 +1,4 @@
+import { AccueilComponent } from './content/accueil/accueil.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProduitComponent } from './content/produit/produit.component';
@@ -7,7 +8,7 @@ import { DashboardComponent } from './content/dashboard/dashboard.component';
 const routes: Routes = [
   {
     path : '',
-    redirectTo : 'dashboard' , pathMatch : 'full'
+    redirectTo : 'accueil' , pathMatch : 'full'
   },
   {
     path : 'stock',
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path : 'dashboard',
     component : DashboardComponent
+  },
+  {
+    path : 'accueil',
+    component : AccueilComponent
   }
 ];
 

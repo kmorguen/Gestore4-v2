@@ -12,6 +12,7 @@ import { NavbarComponent } from './content/partials/layout/navbar/navbar.compone
 import { ContentComponent } from './content/content.component';
 import { DashboardComponent } from './content/dashboard/dashboard.component';
 import { AccueilComponent } from './content/accueil/accueil.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AccueilComponent } from './content/accueil/accueil.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [AfficheProdService ],
   bootstrap: [AppComponent]
