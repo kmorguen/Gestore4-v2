@@ -1,3 +1,4 @@
+import { LoginComponent } from './content/login/login.component';
 import { AccueilComponent } from './content/accueil/accueil.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -9,6 +10,14 @@ const routes: Routes = [
   {
     path : '',
     redirectTo : 'accueil' , pathMatch : 'full'
+  },,
+  {
+    path : 'accueil',
+    component : AccueilComponent
+  },
+  {
+    path : 'login',
+    component : LoginComponent
   },
   {
     path : 'stock',
@@ -21,10 +30,6 @@ const routes: Routes = [
   {
     path : 'dashboard',
     component : DashboardComponent
-  },
-  {
-    path : 'accueil',
-    component : AccueilComponent
   }
 ];
 

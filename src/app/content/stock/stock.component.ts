@@ -9,7 +9,7 @@ import { FormGroup, FormBuilder, Validators} from '@angular/forms'
 })
 export class StockComponent implements OnInit {
   
-  produits : Produit [] = []
+  produits : Produit []  
 
   produitForm : FormGroup
   constructor(private afficheProdService : AfficheProdService , private fb : FormBuilder ){
@@ -17,11 +17,13 @@ export class StockComponent implements OnInit {
       name : ['',Validators.required],
       quantite : '',
       prixUnitaire : ''
-    }) 
-    this.produits = this.afficheProdService.getProduits();
+    })
   }
-
+  onGet(){
+   
+  }
   ngOnInit(): void {
-    this.produits
+    
+
   }
 }

@@ -10,11 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class ProduitComponent implements OnInit {
  produits : Produit [] = []
   constructor(private afficheProdService : AfficheProdService) { 
-    this.produits = this.afficheProdService.getProduits();
   }
 
   ngOnInit(): void {
-    this.produits
   }
 
 }
